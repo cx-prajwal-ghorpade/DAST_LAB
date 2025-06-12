@@ -25,10 +25,10 @@ jobs:
         with:
           command: web
           config: dast-config/zap_config.yaml
-          environment_id: 598609ac-6adc-48d0-b310-1bd7bb6aa435
+          environment_id: 8c885dfd-c60b-4189-983f-050422b6f864
           fail_on: "HIGH"
           log_level: info
-          base_url: https://deu.ast.checkmarx.net/
+          base_url: https://ind.iam.checkmarx.net/
           verbose: true
           timeout: 100000
           output: ${{ github.workspace }}/output_fold
