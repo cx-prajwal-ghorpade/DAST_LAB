@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy EasyBuggy
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
@@ -37,7 +37,7 @@ jobs:
         sed -i "s/<<PUBLIC_IP>>/${EC2_IP}/g" ./deploy/terraform/resources/zap_config.yaml
         sed -i "s/<<PUBLIC_IP>>/${EC2_IP}/g" ./deploy/terraform/resources/zap_config_api.yaml
     - name: Upload Config Files
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: configs
         path: ./deploy/terraform/resources
